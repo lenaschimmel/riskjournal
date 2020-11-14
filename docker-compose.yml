@@ -1,0 +1,28 @@
+version: "3.3"
+services:
+  # microcovid-cli:
+  #   # build: git@github.com:lenaschimmel/microcovid-cli.git
+  #   # while developing, you can use this line instead:
+  #   build: ../microcovid-cli
+  #   image: microcovid-cli:local
+
+  microcovid-server:
+    # build: git@github.com:lenaschimmel/microcovid-server.git
+    # while developing, you can use this line instead:
+    build: ../microcovid-server
+    image: microcovid-server:local
+    ports:
+      - "26843:26843"
+    volumes:
+      - filevolume:/files
+
+  covid-incidence-germany:
+    # build: git@github.com:lenaschimmel/ covid-incidence-germany.git
+    # while developing, you can use this line instead:
+    build: ../covid-incidence-germany
+    image:  covid-incidence-germany:local
+    volumes:
+      - filevolume:/files
+
+volumes:
+  filevolume:
