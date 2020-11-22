@@ -1,12 +1,10 @@
 <!-- PROJECT LOGO -->
-# RiskJournal Server
-A simple server to work in conjunction with riskjournal-cli.<br/>
-
+# RiskJournal
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-- [RiskJournal Server](#riskjournal-server)
+- [RiskJournal](#riskjournal)
   - [Table of Contents](#table-of-contents)
   - [About The Project](#about-the-project)
   - [Getting Started](#getting-started)
@@ -24,7 +22,13 @@ A simple server to work in conjunction with riskjournal-cli.<br/>
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This product is in very early development and **SHOULD NOT BE USED YET**. 
+This product is in very early development and **SHOULD NOT BE USED YET**.
+
+RiskJournal consists of multiple repositories:
+ * __riskjournal__ - This repository. General overview and a docker-compose config to run _riskjournal-server_ and _covid-incidence-germany_ together
+ * __riskjournal-cli__ - A node.js command line application to track personal covid risk. Currently this combines the application logic and the interface, but it will be split into two repositories later.
+ * __riskjournal-server__ - A simple server which lets multiple instances of _riskjournal-cli_ exchange data, and hosts incidence data that it gets from _covid-incidence-germany_
+ * __covid-incidence-germany__ - Downloads the covid case statistics and computes the daily incidence for each district and age group
 
 <!-- GETTING STARTED -->
 ## Getting Started
